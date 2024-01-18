@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Vendor Registration</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="text" name="company_name" placeholder="Company Name">
+        <button type="submit">Register</button>
+    </form>
+{% endblock %}
